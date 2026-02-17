@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1 align="center">Online Learning Platform</h1>
+  </header>
+  <main>
+    <section>
+      <fieldset align="center">
+        <legend>Enrollment Form</legend>
+        <form action="#" method="POST">
+          <label for="name">Name :</label>
+          <input type="text" id="name" name="name" placeholder="Enter Name..." required autofocus>
+
+          <br><br>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Enter email..." required>
+
+          <br><br>
+          <label for="course">Course :</label>
+          <input list="courses" name="course" id="course" placeholder="Enter your course">
+          <datalist id="courses">
+            <option value="HTML"></option>
+            <option value="CSS"></option>
+            <option value="JavaScript"></option>
+            <option value="Bootstrap"></option>
+            <option value="Java"></option>
+
+          </datalist>
+          <br><br>
+
+          <label for="completed">Completed Courses :</label>
+          <input type="number" id="completed" name="completed" min="0" max="10">
+
+          <br><br>
+          <label for="exp">Exp Range :</label>
+          <input type="range" id="exp" name="exp" min="0" min="10" step="1" >
+          <br><br>
+
+         <label for="">Skill Level :</label>
+         <meter value="6" min="0" max="10"></meter>
+         <p>beginner to Advances</p>
+
+
+
+          <label for="">Enrollment Completion :</label>
+          <progress value="70" max="100"></progress>
+
+          <br><br>
+          <input type="submit" value="Enroll">
+          <input type="reset">
+        </form>
+      </fieldset>
+    </section>
+  </main>
+
+  <footer>
+    <p align="center">&copy 2026  online learning platform </p>
+  </footer>
+
+</body>
+
+</html>
