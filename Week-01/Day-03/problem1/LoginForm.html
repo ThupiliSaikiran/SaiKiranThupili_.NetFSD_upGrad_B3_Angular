@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: #A9FFCB;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 26px;
+      width: 350px;
+
+    }
+
+    .container h1 {
+      font-size: 25px;
+      color: #09E36F;
+      text-align: center;
+      margin-bottom: 15px;
+
+    }
+    input{
+      display: block;
+      width:100%;
+      border:none;
+      border-bottom: 2px solid #09E36F;
+      margin-bottom: 15px;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: 500;
+
+    }
+    input:focus{
+      outline: none;
+    }
+    .btn{
+      margin-top: 10px;
+      width:100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color:  #09E36F;
+      font-size: 14px;
+      font-weight: 600;
+     
+    }
+    .btn:hover{
+      background-color: #1bfe85;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email address">
+      <input type="text" placeholder="Country">
+      <input type="tel" placeholder="Phone">
+      <input type="password" placeholder="Password">
+
+      <button type="submit" class="btn">Create Account</button>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>
