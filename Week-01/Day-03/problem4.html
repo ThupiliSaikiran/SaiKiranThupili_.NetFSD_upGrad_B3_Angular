@@ -93,6 +93,47 @@
       background-color: #0b5ed7;
       cursor: pointer;
     }
+
+    @media (max-width:767px) {
+      #nav-sec {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+
+      #main-nav {
+        flex-direction: column;
+        margin-bottom: 10px;
+
+
+      }
+
+      .blog-container {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+     @media (min-width:768px) and (max-width:1023px) {
+     
+
+      .blog-container {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+    }
+     @media (min-width:1024px) {
+     
+
+      .blog-container {
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+      }
+
+    }
   </style>
 
   <title>Document</title>
@@ -114,32 +155,38 @@
     <section class="blog-container">
       <div class="blog-card">
         <h3>The Importance of Time Management</h3>
-        <p>Learn practical time management techniques to boost productivity, reduce stress, and achieve your daily goals effectively</p>
+        <p>Learn practical time management techniques to boost productivity, reduce stress, and achieve your daily goals
+          effectively</p>
         <button class="btn">Read More</button>
       </div>
       <div class="blog-card">
         <h3>Healthy Habits for a Better Lifestyle</h3>
-        <p>Discover simple healthy habits that improve physical fitness, mental clarity, and overall well-being in everyday life</p>
+        <p>Discover simple healthy habits that improve physical fitness, mental clarity, and overall well-being in
+          everyday life</p>
         <button class="btn">Read More</button>
       </div>
       <div class="blog-card">
         <h3>The Power of Positive Thinking</h3>
-        <p>Understand how a positive mindset can strengthen confidence, overcome challenges, and create better opportunities for success</p>
+        <p>Understand how a positive mindset can strengthen confidence, overcome challenges, and create better
+          opportunities for success</p>
         <button class="btn">Read More</button>
       </div>
       <div class="blog-card">
         <h3>Basics of Personal Finance</h3>
-        <p>Explore essential financial skills like budgeting, saving money, and smart spending to secure a stable future</p>
+        <p>Explore essential financial skills like budgeting, saving money, and smart spending to secure a stable future
+        </p>
         <button class="btn">Read More</button>
       </div>
       <div class="blog-card">
         <h3>The Impact of Technology on Modern Life</h3>
-        <p>Examine how technology influences communication, work culture, education, and the way people connect globally</p>
+        <p>Examine how technology influences communication, work culture, education, and the way people connect globally
+        </p>
         <button class="btn">Read More</button>
       </div>
       <div class="blog-card">
         <h3>Self-Improvement Tips for Students</h3>
-        <p>Find effective self-improvement strategies that enhance learning ability, build confidence, and support long-term personal growth</p>
+        <p>Find effective self-improvement strategies that enhance learning ability, build confidence, and support
+          long-term personal growth</p>
         <button class="btn">Read More</button>
       </div>
 
