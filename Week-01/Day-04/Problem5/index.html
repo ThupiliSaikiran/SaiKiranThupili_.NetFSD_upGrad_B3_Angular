@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Analysis</title>
+  <style>
+    .container{
+      width:350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 50px auto;
+      align-items: center;
+      background-color: #C1C1C1;
+      padding: 20px;
+    }
+    .container input{
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+      padding: 7px;
+      margin-bottom: 10px;
+    }
+    .btn{
+      width: 85%;
+      padding:7px;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .btn:hover{
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Number Analysis Tool</h1>
+    <input type="text" id="num" placeholder="Enter a Number..">
+    <button class="btn" onclick="checkAnalysis()">Enter</button>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
