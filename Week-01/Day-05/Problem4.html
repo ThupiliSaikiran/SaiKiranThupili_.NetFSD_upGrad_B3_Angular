@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #36d1dc, #5b86e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #profileCard {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        #profileCard p {
+            margin: 8px 0;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 14px;
+        }
+
+        #showBtn {
+            background-color: #007bff;
+        }
+
+        #updateBtn {
+            background-color: #28a745;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Profile</h2>
+
+    <div id="profileCard"></div>
+
+    <button id="showBtn">Show Profile</button>
+
+    <input type="number" id="newMarks" placeholder="Enter new marks">
+    <button id="updateBtn">Update Marks</button>
+</div>
+
+<script>
+var student = {
+    name: "Sai Kiran",
+    rollNo: 101,
+    marks: 85
+};
+
+function updateStudentProfile(studentObj) {
+    var card = document.getElementById("profileCard");
+    card.innerHTML =
+        "<p>Name: " + studentObj.name + "</p>" +
+        "<p>Roll No: " + studentObj.rollNo + "</p>" +
+        "<p>Marks: " + studentObj.marks + "</p>";
+}
+
+function updateMarks(newMarks) {
+    student.marks = newMarks;
+    updateStudentProfile(student);
+}
+
+document.getElementById("showBtn").addEventListener("click", function() {
+    updateStudentProfile(student);
+});
+
+document.getElementById("updateBtn").addEventListener("click", function() {
+    var marksValue = document.getElementById("newMarks").value;
+    if (marksValue !== "") {
+        updateMarks(marksValue);
+    }
+});
+</script>
+
+</body>
+</html>

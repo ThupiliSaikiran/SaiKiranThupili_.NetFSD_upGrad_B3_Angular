@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Info Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4e73df;
+            border: none;
+            color: white;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2e59d9;
+        }
+
+        p {
+            margin: 10px 0;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>User Information</h2>
+    <button onclick="showUser()">Display User Info</button>
+
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="city"></p>
+</div>
+
+<script>
+function displayUserInfo(userObj) {
+    document.getElementById("name").innerText = "Name: " + userObj.name;
+    document.getElementById("age").innerText = "Age: " + userObj.age;
+    document.getElementById("city").innerText = "City: " + userObj.city;
+}
+
+function showUser() {
+    var user = {
+        name: "Sai Kiran",
+        age: 23,
+        city: "Nellore"
+    };
+    displayUserInfo(user);
+}
+</script>
+
+</body>
+</html>
