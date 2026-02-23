@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Validation Form</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 2px solid black;
+      padding: 15px;
+      width: 250px;
+    }
+
+    #error {
+      color: red;
+      font-size: 14px;
+      min-height: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <p id="error"></p>
+
+    <label>Name :</label>
+    <input type="text" id="name" onchange="validateName()">
+
+    <label>E-Mail :</label>
+    <input type="text" id="mail" onchange="validateMail()">
+
+    <label>Age :</label>
+    <input type="text" id="age" onchange="validateAge()">
+
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+  <script>
+
+    function validateName() {
+
+
+
+      let name = document.getElementById('name').value.trim();
+      document.getElementById('error').innerText = "";
+      console.log(name)
+
+      if (name === "") {
+        document.getElementById('error').innerText = "Name cannot be empty";
+
+      }
+
+    }
+
+    function validateMail() {
+      let email = document.getElementById('mail').value.trim();
+
+      document.getElementById('error').innerText = "";
+
+      if (email === "" || !email.includes('@')) {
+        document.getElementById('error').innerText = "Invalid Email";
+      }
+    }
+
+    function validateAge() {
+      let age = Number(document.getElementById('age').value);
+      document.getElementById('error').innerText = "";
+
+      if (age <= 18 || isNaN(age)) {
+        document.getElementById('error').innerText = "Age must be above 18";
+      }
+    }
+
+    function submitForm() {
+
+      let name = document.getElementById('name').value.trim();
+      let email = document.getElementById('mail').value.trim();
+      let age = Number(document.getElementById('age').value);
+
+      if (name === "") {
+        document.getElementById('error').innerText = "Name cannot be empty";
+        return;
+
+      }
+
+      if (email === "" || !email.includes('@')) {
+        document.getElementById('error').innerText = "Invalid Email";
+        return ;
+      }
+
+      if (age <= 18 || isNaN(age)) {
+        document.getElementById('error').innerText = "Age must be above 18";
+        return;
+      }
+      sessionStorage.setItem('name',name);
+      sessionStorage.setItem('mail',mail);
+      sessionStorage.setItem('age',age);
+
+
+      document.getElementById('error').innerText="Data submitted successfully"
+
+      document.getElementById('id').style.color='green'
+
+
+
+
+
+    }
+
+  </script>
+
+</body>
+
+</html>

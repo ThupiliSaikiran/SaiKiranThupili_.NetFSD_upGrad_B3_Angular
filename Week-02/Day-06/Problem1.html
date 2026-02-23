@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: #A997DF;
+      width: 250px;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.52);
+    }
+
+    button {
+      padding: 7px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    #save {
+      background-color: #57C4E5;
+    }
+
+    #reset {
+      background-color: #FFD166;
+    }
+    p{
+      text-align: center;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p id="res"></p>
+  <div class="container">
+    <label for="date">Date :</label>
+    <input type="date" id="date" required>
+    <label for="note">Daily Note :</label>
+    <textarea name="note" id="note" rows="5"></textarea>
+    <button id="save">Save</button>
+    <button id="reset">Reset</button>
+   <label for="">Get Date  : </label>
+   <input type="date" id="get-date">
+   <button id="getNoteBtn">Get Note</button>
+
+  </div>
+
+
+
+  <script>
+
+
+    let saveBtn = document.getElementById("save")
+    let resetBtn = document.getElementById("reset")
+    let getNoteBtn= document.getElementById("getNoteBtn")
+
+    saveBtn.addEventListener('click', function () {
+      let date = document.getElementById('date').value
+      let note = document.getElementById('note').value
+      localStorage.setItem(`${date}`, note)
+      console.log("hi")
+    })
+
+    resetBtn.addEventListener('click',function(){
+      localStorage.clear()
+    })
+
+    getNoteBtn.addEventListener('click',function(){
+      let date=document.getElementById('get-date').value
+
+      let note = localStorage.getItem(date);
+      document.getElementById('res').innerText=note;
+      
+    })
+
+  </script>
+</body>
+
+</html>

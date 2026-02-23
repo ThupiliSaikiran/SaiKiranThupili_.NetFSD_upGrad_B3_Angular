@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="getLocation()">Get My Location</button>
+  <p id="output"></p>
+  <ul id="res-list">
+
+  </ul>
+
+
+  <script>
+    function getLocation() {
+      console.log("Hi")
+      let out = document.getElementById('output')
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(callBack, errorBlock)
+      } else {
+        out.innerText = "Website doesn't support location"
+      }
+    }
+
+    function callBack(position) {
+      let out = document.getElementById('output')
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude
+
+      out.innerText = "Latitude : " + latitude + "\nLongitude : " + longitude;
+
+      let lst = JSON.parse(sessionStorage.getItem("coords")) || []
+      console.log(lst)
+      let coord = { 'lat': latitude, 'log': longitude }
+      lst.unshift(coord);
+
+      if (lst.length > 5) {
+        lst.pop();
+      }
+
+      sessionStorage.setItem("coords", JSON.stringify(lst));
+
+      displayLocations(lst);
+
+    }
+    function displayLocations(lst) {
+      let ul = document.getElementById('res-list');
+      ul.innerHTML = "";
+      for (let i = 0; i < lst.length; i++) {
+        let li = document.createElement('li');
+        li.innerText =
+          `Latitude: ${lst[i].lat} - Longitude: ${lst[i].log}`;
+        ul.appendChild(li);
+      }
+    }
+    function errorBlock(error) {
+      let message = "";
+      switch (error.code) {
+        case 1:
+          message = "Permission denied. Please allow location access"
+          break;
+        case 2:
+          message = "Time out";
+          break;
+        case 3:
+          message = "Location unavailable";
+          break;
+        default:
+          message = "An unknown error occurred"
+
+
+      }
+      document.getElementById("output").innerText = message;
+    }
+  </script>
+
+</body>
+
+</html>
