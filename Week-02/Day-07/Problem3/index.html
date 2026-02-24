@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-top: 30px;
+
+
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h1>Company Emp List</h1>
+    <select name="" id="emp-type">
+      <option value="all">All Employee</option>
+      <option value="manager">Manager</option>
+      <option value="salesman">Salesman</option>
+      <option value="clerk">Clerk</option>
+      <option value="developer">Developer</option>
+    </select>
+    <button onclick="showEmps()">Show Emps</button>
+  </div>
+  <table border="2px">
+    <thead>
+      <tr>
+        <th>EmpID</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Salary</th>
+        <th>Dept</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
