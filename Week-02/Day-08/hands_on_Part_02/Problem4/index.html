@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    .search-box{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background-color: #B3F2DD;
+      padding: 10px;
+      margin-bottom: 10px;
+
+
+    }
+    .search-box input{
+      width: 40%;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      height: 25px;
+      outline: none;
+    }
+     .search-box button{
+      border: none;
+      border-radius: 10px;
+      background-color: #276FBF;
+      color: white;
+      font-weight: 600;
+     }
+     .container{
+      width:70%;
+      margin: auto;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      gap: 10px;
+     }
+     .prod-card{
+      border: #276FBF 1px solid;
+      padding: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+  </style>
+</head>
+<body>
+  <h1 >Mini Product Search App </h1>
+  <div class="search-box">
+    <input type="text" id="search-prod">
+    <button id="btn">Search</button>
+  </div>
+  <h3 style="text-align: center;">Products</h3>
+
+  <div class="container" id="prod-con">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
