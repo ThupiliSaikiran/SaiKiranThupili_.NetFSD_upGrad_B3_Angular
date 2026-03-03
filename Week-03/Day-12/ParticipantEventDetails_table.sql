@@ -1,26 +1,26 @@
-create table ParticipantEventDetails 
+CREATE TABLE ParticipantEventDetails 
 (
-	id int IDENTITY(1,1)primary key,
-	ParticipantEmailId varchar(50) not null
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	ParticipantEmailId VARCHAR(50) NOT NULL
 		FOREIGN KEY REFERENCES UserInfo(EmailId),
-	EventId int not null
+	EventId INT NOT NULL
 		FOREIGN KEY REFERENCES EventDetails(EventId),
-	SessionId int not null
+	SessionId INT NOT NULL
 		FOREIGN KEY REFERENCES SessionInfo(SessionId),
-	IsAttended bit check(IsAttended in(0,1))
+	IsAttended BIT
 ); 
 
-insert into ParticipantEventDetails values
+INSERT INTO ParticipantEventDetails VALUES
 	('admin1@gmail.com',1,1,0);
 
-insert into ParticipantEventDetails values
+INSERT INTO ParticipantEventDetails VALUES
 	('min1@gmail.com',1,1,0);
 
-insert into ParticipantEventDetails values
+INSERT INTO ParticipantEventDetails VALUES
 	('priya@gmail.com',1,3,0);
 	
-update ParticipantEventDetails set IsAttended = 1 where id=4;
+UPDATE ParticipantEventDetails SET IsAttended = 1 WHERE id=4;
 
-delete from ParticipantEventDetails where id=3;
+DELETE FROM ParticipantEventDetails WHERE id=3;
 
-select * from ParticipantEventDetails;
+SELECT * FROM ParticipantEventDetails;

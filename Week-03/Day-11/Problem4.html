@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+
+    .completeBtn {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+    }
+
+    .removeBtn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+    }
+
+    .over {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Interactive To-Do List Application</h1>
+
+  <div>
+    <div>
+      <input type="text" id="taskInput">
+      <button id="addBtn">Add task</button>
+    </div>
+    <div>
+      <p id="total">Total tasks: 0</p>
+      <p id="completed">Completed tasks : 0</p>
+    </div>
+    <ul id="res">
+
+    </ul>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+  <script>
+    let totalCount = 0;
+
+    function updateCounts() {
+      let total = $("#res li").length;
+      let completed = $("#res li .over").length;
+
+      $("#total").text(`Total Tasks : ${total}`);
+      $("#completed").text(`Completed Tasks : ${completed}`);
+    }
+
+    $("#addBtn").on("click", function () {
+
+      let value = $("#taskInput").val().trim();
+      if (value === "") return;
+
+      let task = `
+      <li>
+        <span>${value}</span>
+        <button class="completeBtn">Complete</button>
+        <button class="removeBtn">Remove</button>
+      </li>
+    `;
+
+      $("#res").append(task);
+      $("#taskInput").val("");
+
+      updateCounts();
+    });
+
+    $("#res").on("click", ".completeBtn", function () {
+
+      $(this).siblings("span").toggleClass("over");
+      updateCounts();
+    });
+
+     $("#res").on("click", ".removeBtn", function () {
+
+    $(this).parent().remove();  
+    updateCounts();
+  });
+
+  </script>
+</body>
+
+</html>

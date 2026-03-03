@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    h1 {
+      color: rgb(74, 67, 67);
+      margin-bottom: 10px;
+    }
+
+    .container {
+      background-color: #F0EBD8;
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      margin: auto;
+      padding: 20px;
+      gap: 5px;
+      border-radius: 5px;
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.23);
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: 0.3s ease;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #667eea;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #res {
+      text-align: center;
+      font-weight: bold;
+      min-height: 20px;
+      margin-bottom: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Student Feedback Form Interaction</h1>
+  <p id="res"></p>
+
+  <div class="container">
+    <label for="">Name : </label>
+    <input type="text" id="name">
+    <label for="">E-Mail : </label>
+    <input type="email" id="email">
+    <label for="">Course Rating : </label>
+    <select name="" id="course-rating">
+      <option value="excellent">Excellent</option>
+      <option value="good">Good</option>
+      <option value="average">Average</option>
+      <option value="bad">Bad</option>
+      <option value="worst">Worst</option>
+    </select>
+    <label for="">Comments</label>
+    <textarea name="" id="comment"></textarea>
+    <button id="btn">Submit</button>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#btn').click(function () {
+        let name = $('#name').val();
+        let email = $("#email").val();
+        let courseRating = $("#course-rating").val();
+        let comment = $("#comment").val().trim()
+
+        if (name === "" && email === "") {
+
+          $('#res').
+            text("Please Enter name and email..")
+            .css("color", "red")
+          return
+        } else if (name === "") {
+
+          $('#res').
+            text("Please Enter name..")
+            .css("color", "red")
+          return
+
+        } else if (email === "" || !email.includes('@')) {
+
+          $('#res').
+            text("Please Enter email or correct..")
+            .css("color", "red")
+          return
+
+        }
+        $('#res').
+          text(`${name}! Your data is submitted`)
+          .css("color", "green");
+
+        $('#name').val("");
+        $("#email").val("")
+        $("#course-rating").val("excellent");
+        $("#comment").val("")
+
+      })
+    })
+
+
+  </script>
+
+
+</body>
+
+</html>

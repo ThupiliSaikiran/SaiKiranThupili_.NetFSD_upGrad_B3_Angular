@@ -1,16 +1,15 @@
-create database EventDb;
-use EventDb;
+CREATE DATABASE EventDb;
+USE EventDb;
 
-create table UserInfo
+CREATE TABLE UserInfo
 (
-	EmailId varchar(50) primary key,
-	UserName varchar(50) not null,
-	Role varchar(30) not null check(Role in ('Admin','Participant')),
-	Password varchar(20) not null,
-	CONSTRAINT chk_password_length check(len(Password) between 6 and 20)
+	EmailId VARCHAR(50) PRIMARY KEY,
+	UserName VARCHAR(50) NOT NULL,
+	[Role] VARCHAR(30) NOT NULL CHECK(Role in ('Admin','Participant')),
+	[Password] VARCHAR(20) NOT NULL CHECK(len(Password) between 6 and 20)
 );
 
-insert into UserInfo values 
+INSERT INTO UserInfo VALUES 
 	('admin1@gmail.com', 'Sai Kiran', 'Admin', 'admin123'),
 
 	('john@gmail.com', 'John', 'Participant', 'john@789'),
@@ -19,8 +18,8 @@ insert into UserInfo values
 
 	('manager@gmail.com', 'Arun Kumar', 'Admin', 'Arun@456');
 
-insert into UserInfo values 
+INSERT INTO UserInfo VALUES 
 	('sai@gmail.com', 'sai' , 'aaaa', 'assaassaaa');
 
-select * from UserInfo;
+SELECT * FROM UserInfo;
 

@@ -1,11 +1,11 @@
 CREATE TABLE SpeakersDetails 
 (
-	SpeakerId int primary key,
-	SpeakerName varchar(50) not null check(len(SpeakerName) between 1 and 50)
+	SpeakerId INT PRIMARY KEY,
+	SpeakerName VARCHAR(50) NOT NULL CHECK(LEN(SpeakerName) BETWEEN 1 AND 50)
 );
 
 
-insert into SpeakersDetails values
+INSERT INTO SpeakersDetails VALUES
 		(101,'');
 
 INSERT INTO SpeakersDetails VALUES (1, 'Sai Kiran');
@@ -14,4 +14,4 @@ INSERT INTO SpeakersDetails VALUES (3, 'Priya Sharma');
 INSERT INTO SpeakersDetails VALUES (4, 'Arun Kumar');
 INSERT INTO SpeakersDetails VALUES (5, 'Meghana Reddy');
 
-select * from SpeakersDetails;
+SELECT * FROM SpeakersDetails;

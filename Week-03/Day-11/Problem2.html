@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .faq-section {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .faq-section>div {
+      background: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .question {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .question:hover {
+      color: blue;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .active {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-section">
+
+    <div>
+      <h3 class="question">What courses do you offer?</h3>
+      <p class="answer">We offer courses in Full Stack Development, Data Science...</p>
+    </div>
+
+    <div>
+      <h3 class="question">How long does each course take?</h3>
+      <p class="answer">Most courses take between 8 to 16 weeks...</p>
+    </div>
+
+    <div>
+      <h3 class="question">Do you provide placement assistance?</h3>
+      <p class="answer">Yes, we provide placement assistance...</p>
+    </div>
+
+    <div>
+      <h3 class="question">Are the classes live or recorded?</h3>
+      <p class="answer">We offer both live instructor-led sessions...</p>
+    </div>
+
+    <div>
+      <h3 class="question">Will I receive a certificate?</h3>
+      <p class="answer">Yes, students receive a certificate...</p>
+    </div>
+
+  </div>
+
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".question").click(function () {
+        let question = $(this);
+        let answer = question.next(".answer")
+        answer.slideToggle(500, function () {
+          if (answer.is(':visible')) {
+            question.addClass("active")
+          } else {
+            question.removeClass("active")
+          }
+        })
+
+      })
+    })
+
+  </script>
+</body>
+
+</html>
