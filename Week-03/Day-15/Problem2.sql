@@ -91,7 +91,7 @@ CREATE INDEX idx_orders_staff_id
 ON orders(staff_id);
 
 
-
+-- Test performance improvement using execution plan.
 
 SELECT 
 p.product_name,
