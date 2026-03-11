@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Counter App</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+    width:300px;
+}
+
+h1{
+    font-size:40px;
+    margin:20px 0;
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.increment{
+    background-color:#007bff;
+    color:white;
+}
+
+.increment:hover{
+    background-color:#0056b3;
+}
+
+.reset{
+    background-color:#dc3545;
+    color:white;
+}
+
+.reset:hover{
+    background-color:#a71d2a;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Counter App</h2>
+
+<h1 id="counter">0</h1>
+
+<button id="incrementBtn" class="increment">Increment</button>
+<button id="resetBtn" class="reset">Reset</button>
+
+</div>
+
+<script>
+
+// Global variable
+var counterValue = 0;
+
+
+// Function to update UI
+function updateCounterDisplay()
+{
+    document.getElementById("counter").innerText = counterValue;
+}
+
+
+// Function with parameter
+function incrementCounter(step)
+{
+    counterValue = counterValue + step;
+    updateCounterDisplay();
+}
+
+
+// Reset function
+function resetCounter()
+{
+    counterValue = 0;
+    updateCounterDisplay();
+}
+
+
+// Event listeners (No inline JS)
+document.getElementById("incrementBtn").addEventListener("click", function(){
+    incrementCounter(1);
+});
+
+document.getElementById("resetBtn").addEventListener("click", resetCounter);
+
+</script>
+
+</body>
+</html>

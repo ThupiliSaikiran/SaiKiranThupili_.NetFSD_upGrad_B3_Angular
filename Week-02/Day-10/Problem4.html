@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Profile Manager</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    width:350px;
+    text-align:center;
+}
+
+.profile{
+    border:2px solid #007bff;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+    background:#eef5ff;
+}
+
+button{
+    padding:10px 15px;
+    margin-top:10px;
+    border:none;
+    border-radius:5px;
+    background:#007bff;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+input{
+    padding:8px;
+    margin-top:10px;
+    width:80%;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Student Profile</h2>
+
+<div id="profileBox" class="profile"></div>
+
+<input type="number" id="marksInput" placeholder="Enter new marks">
+
+<br>
+
+<button id="updateMarksBtn">Update Marks</button>
+
+</div>
+
+<script>
+
+// Global Student Object
+var student = {
+    name: "Sai Kiran",
+    rollNo: 101,
+    marks: 85
+};
+
+
+// Function to display student profile
+function updateStudentProfile(studentObj)
+{
+    var profileHTML =
+        "<p><b>Name:</b> " + studentObj.name + "</p>" +
+        "<p><b>Roll No:</b> " + studentObj.rollNo + "</p>" +
+        "<p><b>Marks:</b> " + studentObj.marks + "</p>";
+
+    document.getElementById("profileBox").innerHTML = profileHTML;
+}
+
+
+// Function to update marks
+function updateMarks(newMarks)
+{
+    student.marks = newMarks;   // update object value
+    updateStudentProfile(student); // refresh display
+}
+
+
+// Button event
+document.getElementById("updateMarksBtn").addEventListener("click", function(){
+
+    var newMarks = document.getElementById("marksInput").value;
+
+    if(newMarks !== "")
+    {
+        updateMarks(newMarks);
+    }
+
+});
+
+
+// Initial display
+updateStudentProfile(student);
+
+</script>
+
+</body>
+</html>

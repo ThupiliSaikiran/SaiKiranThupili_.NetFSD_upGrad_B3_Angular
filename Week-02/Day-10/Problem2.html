@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Info Display</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+    width:350px;
+}
+
+button{
+    background-color:#28a745;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#1e7e34;
+}
+
+p{
+    font-size:18px;
+    margin:10px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>User Information</h2>
+
+<button onclick="showUser()">Display User Info</button>
+
+<p id="name"></p>
+<p id="age"></p>
+<p id="city"></p>
+
+</div>
+
+<script>
+
+// Function that receives object as parameter
+function displayUserInfo(userObj)
+{
+    document.getElementById("name").innerText = "Name: " + userObj.name;
+    document.getElementById("age").innerText = "Age: " + userObj.age;
+    document.getElementById("city").innerText = "City: " + userObj.city;
+}
+
+// Button click function
+function showUser()
+{
+    // Object creation
+    var user = {
+        name: "Rahul",
+        age: 25,
+        city: "Hyderabad"
+    };
+
+    displayUserInfo(user);
+}
+
+</script>
+
+</body>
+</html>

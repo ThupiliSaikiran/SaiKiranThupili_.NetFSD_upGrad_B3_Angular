@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Generator</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button{
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        #greeting{
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Greeting Generator</h2>
+
+    <input type="text" id="username" placeholder="Enter your name">
+
+    <br>
+
+    <button onclick="generateGreeting()">Generate Greeting</button>
+
+    <p id="greeting"></p>
+
+</div>
+
+<script>
+
+function generateGreeting()
+{
+    var name = document.getElementById("username").value;
+
+    var message = "Hello, " + name + "! Welcome to our website.";
+
+    document.getElementById("greeting").innerText = message;
+}
+
+</script>
+
+</body>
+</html>
