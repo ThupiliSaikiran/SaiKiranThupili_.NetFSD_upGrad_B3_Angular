@@ -112,7 +112,6 @@ END;
 
 EXEC sp_orders_by_date_range '2026-03-08','2026-03-09';
 
-
 --Create a scalar function to calculate total price after discount.
 
 CREATE FUNCTION total_price_after_disc
@@ -131,7 +130,7 @@ END
 
 SELECT dbo.total_price_after_disc(1000,10) AS Final_Price;
 
--- Create a table-valued function to return top 5 selling products.
+--- Create a table-valued function to return top 5 selling products.
 
 CREATE FUNCTION top_5_selling_prods()
 RETURNS TABLE

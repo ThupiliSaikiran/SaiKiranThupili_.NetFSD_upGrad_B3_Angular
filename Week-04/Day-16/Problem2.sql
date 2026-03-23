@@ -19,12 +19,6 @@ INSERT INTO Stocks VALUES
 
 SELECT * FROM Stocks;
 
--- Create an AFTER INSERT trigger on order_items.
--- Reduce the corresponding quantity in stocks table.
--- Prevent stock from becoming negative.
--- If stock is insufficient, rollback the transaction with a custom error message.
-
-
 CREATE TRIGGER trg_CheckStockBeforeOrder
 ON Order_Items
 AFTER INSERT 
