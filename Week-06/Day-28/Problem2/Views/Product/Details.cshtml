@@ -1,0 +1,37 @@
+﻿@model Products;
+
+<h1 class="display-4">Employee Details</h1>
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Category</th>
+              
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+           
+                <tr>
+                    <td>@Model.productId</td>
+                    <td>@Model.productName</td>
+                    <td>@Model.price</td>
+                    <td>@Model.category</td>
+                  
+
+                </tr>
+
+
+
+        </tbody>
+
+    </table>
+
+</div>
+

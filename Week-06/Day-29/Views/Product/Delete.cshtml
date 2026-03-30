@@ -1,0 +1,13 @@
+﻿@model Product
+
+<p>Product Id: @Model.ProductId</p>
+<p>Product Name: @Model.ProductName</p>
+<p>Product Price: @Model.Price</p>
+<p>Category: @Model.Category</p>
+
+<form asp-action="Delete" method="post">
+    <p>Are you sure. Do you want delete @Model.ProductName</p>
+    <button type="submit" class="btn btn-primary">yes</button>
+    <button >No</button>
+</form>
+
