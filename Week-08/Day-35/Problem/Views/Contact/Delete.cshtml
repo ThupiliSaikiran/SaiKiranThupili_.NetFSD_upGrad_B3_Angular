@@ -1,0 +1,30 @@
+﻿@model ContactInfo
+<h1>Delete Contact </h1>
+
+<p>Contact Id: @Model.ContactId
+<p />
+<p>First Name: @Model.FirstName
+<p />
+<p>Last Name: @Model.LastName
+<p />
+<p>Email Id: @Model.EmailId
+<p />
+<p>Mobile No: @Model.MobileNo
+<p />
+<p>Designation: @Model.Designation
+<p />
+<p>Company Id: @Model.Company.CompanyId
+<p />
+<p>Company Name: @Model.Company.CompanyName
+<p />
+
+<p>Department Id: @Model.Department.DepartmentId
+<p />
+<p>Department Name: @Model.Department.DepartmentName
+<p />
+
+<form asp-controller="Contact" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ContactId" />
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <button asp-controller="contact" asp-action="Index">Cancel</button>
+</form>
