@@ -1,0 +1,24 @@
+﻿@model Feedback
+<form asp-controller="Feedback" asp-action="">
+    <div class="from-group">
+        <label >Name:</label>
+        <input class="form-control" asp-for="Name"/>
+    </div>
+    <div class="from-group">
+        <label>Comment:</label>
+        <input class="form-control" asp-for="Comment" />
+    </div>
+    <div class="from-group">
+        <label>Rating:</label>
+        <input class="form-control" asp-for="Rating" />
+    </div>
+    <div class="from-group">
+        <button type="submit">Comment</button>
+    </div>
+
+</form>
+
+@if(ViewData != null)
+{
+    <p>@ViewData["Message"]</p>
+}

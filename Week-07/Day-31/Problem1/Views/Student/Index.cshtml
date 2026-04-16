@@ -1,0 +1,27 @@
+﻿@model List<Students>
+
+
+<h1>Student List</h1>
+
+<a class="btn btn-primary" href="add">Create New</a>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Course</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var std in Model)
+        {
+            <tr>
+                <td>@std.StudentName</td>
+                <td>@std.Age</td>
+                <td>@std.Course</td>
+            </tr>
+        }
+    </tbody>
+</table>

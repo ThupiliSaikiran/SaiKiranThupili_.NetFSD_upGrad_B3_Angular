@@ -1,0 +1,25 @@
+﻿@model Calculator
+
+<h1>Simple Calculator</h1>
+
+<form asp-action="index" method="post">
+    <div class="form-group">
+        <label class="form-label">Enter Number 1:</label>
+        <input class="form-control" asp-for="Number1" name="Number1" />
+
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Enter Number 2:</label>
+        <input class="form-control" asp-for="Number2" name="Number2" />
+
+    </div>
+
+    <button type="submit">Add</button>
+    
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>Result : @ViewBag.Result</p>
+}

@@ -1,0 +1,14 @@
+﻿@model ContactInfo
+
+<h1>Contact Details</h1>
+
+
+<p>ContactId: @Model.ContactId</p>
+<p>First Name: @Model.FirstName</p>
+<p>Last Name: @Model.LastName</p>
+<p>CompanyName: @Model.CompanyName</p>
+<p>EmailId: @Model.EmailId</p>
+<p>MobileNo: @Model.MobileNo</p>
+<p>Designation: @Model.Designation</p>
+
+<a asp-controller="Contact" asp-action="ShowContacts">Back to List</a>

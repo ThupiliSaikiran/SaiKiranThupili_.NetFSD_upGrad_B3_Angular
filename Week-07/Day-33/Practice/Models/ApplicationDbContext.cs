@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace WebApplication1.Models
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+        {
+           
+        }
+
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Dept> Depts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>()
+                        .HasOne(e => e.Dept)
+                        .WithMany(e => e.Employees)
+                        .HasForeignKey(e => e.DeptId);
+
+
+        }
+
+       
+    }
+}

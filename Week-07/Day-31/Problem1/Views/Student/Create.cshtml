@@ -1,0 +1,28 @@
+﻿@model Students
+
+<h1>Add Student</h1>
+
+<form asp-action="create" method="post">
+    <div class="form-group">
+        <label asp-for="StudentName" class="form-label"></label>
+        <input asp-for="StudentName" class="form-control" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age" class="form-label"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Course" class="form-label"></label>
+        <input asp-for="Course" class="form-control" />
+        <span asp-validation-for="Course" class="text-danger"></span>
+    </div>
+
+    <button type="submit" >Submit</button>
+    <a href="students/List">Back to List</a>
+
+</form>

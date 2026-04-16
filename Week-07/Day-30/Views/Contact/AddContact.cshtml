@@ -1,0 +1,36 @@
+﻿@model ContactInfo
+<h1>Add Contact</h1>
+<form asp-controller="Contact" asp-action="AddContact" method="post">
+
+    <div>
+        <label class="form-label">First Name:</label>
+        <input asp-for="FirstName" class="form-control"/>
+    </div>
+
+    <div>
+        <label class="form-label">Last Name:</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+   
+    <div>
+        <label class="form-label">CompanyName:</label>
+        <input asp-for="CompanyName" class="form-control" />
+    </div>
+    <div>
+        <label class="form-label">EmailId:</label>
+        <input asp-for="EmailId" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Mobile No:</label>
+        <input asp-for="MobileNo" class="form-control" />
+    </div>
+    <div>
+        <label class="form-label">Designation:</label>
+        <input asp-for="Designation" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+    <a asp-controller="Contact" asp-action="ShowContacts">Back to List</a>
+    
+</form>

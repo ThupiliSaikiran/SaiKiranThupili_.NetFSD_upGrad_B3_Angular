@@ -1,0 +1,9 @@
+﻿@model Movie
+
+<form asp-controller="Movie" asp-action="DeleteMovie" method="post">
+
+    <p>are you want delete @Model.Title</p>
+    <button type="submit" class="btn btn-primary">Yes</button>
+    <a asp-controller="Movie" asp-action="ShowMovies">back to list</a>
+
+</form>

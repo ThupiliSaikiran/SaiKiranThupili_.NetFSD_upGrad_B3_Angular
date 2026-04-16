@@ -1,0 +1,32 @@
+﻿@model List<Dept>
+
+
+<table class="table">
+
+    <tr>
+        <th>Dept Id</th>
+        <th>Dept Name</th>
+        <th>Loaction</th>
+        <th>Employees</th>
+    </tr>
+
+    @foreach(var dept in Model)
+    {
+        <tr>
+            <td>@dept.DeptId</td>
+            <td>@dept.Name</td>
+            <td>@dept.Location</td>
+
+         
+            <td>
+                <ul>
+                    @foreach(var emp in dept.Employees)
+                    {
+                        <li>@emp.EmployeeName</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+
+</table>
