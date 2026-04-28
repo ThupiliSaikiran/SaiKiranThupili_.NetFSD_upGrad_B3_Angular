@@ -1,0 +1,24 @@
+2026-04-21 14:34:46.796 +05:30 [INF] User profile is available. Using 'C:\Users\91799\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-21 14:34:48.899 +05:30 [INF] Now listening on: https://localhost:7066
+2026-04-21 14:34:48.914 +05:30 [INF] Now listening on: http://localhost:5236
+2026-04-21 14:34:49.148 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-21 14:34:49.168 +05:30 [INF] Hosting environment: Development
+2026-04-21 14:34:49.176 +05:30 [INF] Content root path: C:\Upgrade\Contact Management Service\Contact Management Service
+2026-04-21 14:41:15.701 +05:30 [INF] User profile is available. Using 'C:\Users\91799\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-21 14:41:17.555 +05:30 [INF] Now listening on: https://localhost:7066
+2026-04-21 14:41:17.574 +05:30 [INF] Now listening on: http://localhost:5236
+2026-04-21 14:41:17.894 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-21 14:41:17.909 +05:30 [INF] Hosting environment: Development
+2026-04-21 14:41:17.922 +05:30 [INF] Content root path: C:\Upgrade\Contact Management Service\Contact Management Service
+2026-04-21 14:58:05.539 +05:30 [INF] User profile is available. Using 'C:\Users\91799\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-21 14:58:06.761 +05:30 [INF] Now listening on: https://localhost:7066
+2026-04-21 14:58:06.767 +05:30 [INF] Now listening on: http://localhost:5236
+2026-04-21 14:58:06.899 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-21 14:58:06.904 +05:30 [INF] Hosting environment: Development
+2026-04-21 14:58:06.910 +05:30 [INF] Content root path: C:\Upgrade\Contact Management Service\Contact Management Service
+2026-04-21 15:14:12.094 +05:30 [INF] User profile is available. Using 'C:\Users\91799\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-21 15:14:14.565 +05:30 [INF] Now listening on: https://localhost:7066
+2026-04-21 15:14:14.604 +05:30 [INF] Now listening on: http://localhost:5236
+2026-04-21 15:14:15.076 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-21 15:14:15.111 +05:30 [INF] Hosting environment: Development
+2026-04-21 15:14:15.121 +05:30 [INF] Content root path: C:\Upgrade\Contact Management Service\Contact Management Service
