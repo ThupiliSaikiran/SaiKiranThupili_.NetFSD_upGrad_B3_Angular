@@ -1,0 +1,56 @@
+2026-04-20 15:59:54.064 +05:30 [INF] User profile is available. Using 'C:\Users\91799\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-04-20 15:59:57.172 +05:30 [INF] Now listening on: https://localhost:7066
+2026-04-20 15:59:57.185 +05:30 [INF] Now listening on: http://localhost:5236
+2026-04-20 15:59:57.501 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-04-20 15:59:57.523 +05:30 [INF] Hosting environment: Development
+2026-04-20 15:59:57.541 +05:30 [INF] Content root path: C:\Upgrade\Contact Management Service\Contact Management Service
+2026-04-20 16:03:06.227 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7066/login - application/json 63
+2026-04-20 16:03:07.130 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:33:07'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-20 16:03:07.218 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:33:07'.
+2026-04-20 16:03:07.264 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7066/login - 404 0 null 1092.7361ms
+2026-04-20 16:03:07.284 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7066/login, Response status code: 404
+2026-04-20 16:04:15.280 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7066/api/login - application/json 63
+2026-04-20 16:04:15.585 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:34:15'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-20 16:04:15.626 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:34:15'.
+2026-04-20 16:04:15.675 +05:30 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-04-20 16:04:15.689 +05:30 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-04-20 16:04:15.708 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7066/api/login - 405 0 null 457.1369ms
+2026-04-20 16:05:03.200 +05:30 [INF] Request starting HTTP/1.1 POST https://localhost:7066/api/login - application/json 63
+2026-04-20 16:05:03.669 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:35:03'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-04-20 16:05:03.745 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '18-04-2026 10:29:11', Current time (UTC): '20-04-2026 10:35:03'.
+2026-04-20 16:05:03.757 +05:30 [INF] Executing endpoint 'Contact_Management_Service.Controllers.AuthenticateController.Login (Contact Management Service)'
+2026-04-20 16:05:04.256 +05:30 [INF] Route matched with {action = "Login", controller = "Authenticate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Contact_Management_Service.Models.User) on controller Contact_Management_Service.Controllers.AuthenticateController (Contact Management Service).
+2026-04-20 16:05:10.241 +05:30 [INF] Executed DbCommand (352ms) [Parameters=[@email='?' (Size = 4000), @password='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Email] = @email AND [u].[Password] = @password
+2026-04-20 16:05:10.535 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-04-20 16:05:10.578 +05:30 [INF] Executed action Contact_Management_Service.Controllers.AuthenticateController.Login (Contact Management Service) in 6298.5983ms
+2026-04-20 16:05:10.586 +05:30 [INF] Executed endpoint 'Contact_Management_Service.Controllers.AuthenticateController.Login (Contact Management Service)'
+2026-04-20 16:05:10.626 +05:30 [INF] Request finished HTTP/1.1 POST https://localhost:7066/api/login - 200 null application/json; charset=utf-8 7496.262ms
+2026-04-20 16:05:59.078 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7066/api/Contact - null null
+2026-04-20 16:05:59.447 +05:30 [INF] Executing endpoint 'Contact_Management_Service.Controllers.ContactController.GetContacts (Contact Management Service)'
+2026-04-20 16:05:59.552 +05:30 [INF] Route matched with {action = "GetContacts", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetContacts() on controller Contact_Management_Service.Controllers.ContactController (Contact Management Service).
+2026-04-20 16:05:59.622 +05:30 [INF] Fetching all contacts
+2026-04-20 16:06:00.666 +05:30 [INF] Executed DbCommand (162ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ContactId], [c].[CategoryId], [c].[Email], [c].[Name], [c].[Phone]
+FROM [Contacts] AS [c]
+2026-04-20 16:06:00.726 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Contact_Management_Service.Models.Contact, Contact Management Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-04-20 16:06:00.775 +05:30 [INF] Executed action Contact_Management_Service.Controllers.ContactController.GetContacts (Contact Management Service) in 1216.4527ms
+2026-04-20 16:06:00.780 +05:30 [INF] Executed endpoint 'Contact_Management_Service.Controllers.ContactController.GetContacts (Contact Management Service)'
+2026-04-20 16:06:00.786 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7066/api/Contact - 200 null application/json; charset=utf-8 1724.9308ms
