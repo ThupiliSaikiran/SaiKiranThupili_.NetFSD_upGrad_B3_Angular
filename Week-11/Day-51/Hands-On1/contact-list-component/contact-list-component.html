@@ -1,0 +1,52 @@
+<style>
+  .c1{
+    color:tomato
+  }
+</style>
+
+<h1>Contact Management</h1>
+<hr>
+
+<form #form1="ngForm" (ngSubmit)="addContact()">
+  <label for="">Name :</label>
+  <input type="text" #t1="ngModel" [(ngModel)]="newContact.name" name="name" placeholder="Enter Name.." required>
+  <br>
+  <span class="c1" *ngIf="t1.invalid && t1.dirty">Name must be entered</span>
+  <br><br>
+
+  <label for="">Email :</label>
+  <input type="email" #t2="ngModel" [(ngModel)]="newContact.email" name="email" placeholder="Enter Email.." required>
+  <br>
+  <span class="c1"  *ngIf="t2.invalid && t2.dirty">Email Id must be entered</span>
+  <br><br>
+
+  <label for="">Phone :</label>
+  <input type="text" #t3="ngModel" [(ngModel)]="newContact.phone" name="phone" placeholder="Enter Phone number.." required>
+  <br>
+  <span class="c1"  *ngIf="t3.invalid && t3.dirty">Phone Number must be entered</span>
+  <br><br>
+
+  <button type="submit" [disabled]="form1.invalid">submit</button>
+
+
+</form>
+
+<hr>
+<br>
+
+<table border="2">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone No</th>
+  </tr>
+  @for (contact of contactList; track contact.id){
+    <tr>
+      <td>{{contact.id}}</td>
+      <td>{{contact.name}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+    </tr>
+  }
+</table>

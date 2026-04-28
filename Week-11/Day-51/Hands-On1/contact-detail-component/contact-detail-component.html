@@ -1,0 +1,17 @@
+
+<hr>
+<h1>Contact Details</h1>
+<input type="number" [(ngModel)]="searchId">
+<button (click)="getContactById()">search</button>
+<br><br>
+
+@if(!searchedContact){
+  <p>requested contact not found</p>
+}@else{
+  <div style="border:2px solid black">
+    <p>Id : {{searchedContact.id}}</p>
+    <p>Name : {{searchedContact.name}}</p>
+    <p>Email: {{searchedContact.email}}</p>
+    <p>Phone : {{searchedContact.phone}}</p>
+  </div>
+}
